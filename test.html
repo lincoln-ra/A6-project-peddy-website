@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Spinner Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <style>
+        /* Hide main content initially */
+        #mainContent {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loader" class="flex justify-center items-center h-screen">
+        <span class="loading loading-bars loading-lg"></span>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="text-center">
+        <h1>Welcome to the Pet Adoption Website!</h1>
+        <p>Your content goes here.</p>
+    </div>
+
+    <script>
+        // Show the loader for 2 seconds
+        setTimeout(() => {
+            // Hide the loader
+            document.getElementById('loader').style.display = 'none';
+            // Show the main content
+            document.getElementById('mainContent').style.display = 'block';
+        }, 2000);
+    </script>
+</body>
+</html>
+
